@@ -1,0 +1,74 @@
+.logo-barbearia {
+    width: 150px; 
+        
+}
+
+.header {
+    padding: 10px 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+.navigating {
+    margin: 0 auto;
+}
+
+.space {
+    height: 60px;
+}
+
+a {
+    border:none;
+
+    cursor: pointer;
+
+    font-size: 25px;
+
+    font-family: sans-serif;
+    
+    text-decoration: none;
+
+    padding: 5px;
+
+    color: black;
+}
+
+.insta-icon {
+    width: 35px;
+    margin-right: 20px;
+}
+
+.barber-home {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-left: 950px;
+    width: 400px;
+}
+
+.text-home {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    margin-left: 200px;
+    margin-top: -550px;
+    width: 500px;
+}
+
+.agendar{
+    display: flex;
+    margin-left: 200px;
+    margin-top: 20px;
+    padding: 10px 60px;
+    font-size: 20px;
+    background-color: rgb(173, 106, 4);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
