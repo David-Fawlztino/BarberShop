@@ -71,4 +71,71 @@ a {
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 30px;
 }
+
+/* .services-icons {
+
+    display: flex;
+
+    flex-direction: column; 
+    gap: 30px; 
+    
+    
+    position: absolute;
+    right: 50px;       
+    top: 40%;          
+    transform: translateY(-50%);
+}
+
+.services-item {
+    text-align: center;
+    width: 150px;
+}
+
+.services-icons {
+    width: 80px;
+    height: 80px; 
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px auto; 
+}
+
+
+.service-icon img {
+    font-size: 30px; 
+    color: black; 
+}
+
+.servico-preco {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin: 5px 0 0 0; 
+}
+
+.servico-descricao {
+    font-size: 16px;
+    color: black;
+    margin: 0; 
+}
+
+.service-icon.cut {
+
+    background-color: #ffb881; 
+}
+
+.service-icon.beard {
+
+    background-color: #e0e0e0; 
+}
+
+.scissor-icon {
+    width: 40px;
+}
+
+.beard {
+    width: 50px;
+}  */
