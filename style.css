@@ -74,68 +74,70 @@ a {
     border-radius: 30px;
 }
 
-/* .services-icons {
-
-    display: flex;
-
-    flex-direction: column; 
-    gap: 30px; 
-    
-    
-    position: absolute;
-    right: 50px;       
-    top: 40%;          
-    transform: translateY(-50%);
-}
-
-.services-item {
-    text-align: center;
-    width: 150px;
-}
-
 .services-icons {
+    /* Posicionamento fixo na lateral direita */
+    position: absolute;
+    right: 50px; /* Distância da margem direita */
+    top: 50%; /* Ponto de referência vertical no meio */
+    transform: translateY(-50%); /* Ajusta 50% da própria altura para centralizar verticalmente */
+    
+    /* Empilhamento dos itens */
+    display: flex;
+    flex-direction: column; /* Coloca os itens um abaixo do outro */
+    gap: 30px; /* Espaço entre os componentes */
+}
+
+/* Estilo comum para ambos os componentes */
+.services-icons > div {
+    text-align: center; /* Centraliza todo o texto e o círculo no item */
+    width: 150px; /* Define uma largura para o item */
+}
+
+/* Estilo do Círculo do Ícone */
+.service-icon,
+.services-icons > div > div { /* Seleciona os contêineres dos ícones */
     width: 80px;
-    height: 80px; 
-    border-radius: 50%; 
+    height: 80px;
+    border-radius: 50%; /* Transforma o quadrado em círculo */
+    
+    /* Centraliza o círculo no contêiner do item */
+    margin: 0 auto 5px auto; 
+    
+    /* Centraliza a imagem/ícone dentro do círculo */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto 10px auto; 
 }
 
-
-.service-icon img {
-    font-size: 30px; 
-    color: black; 
+/* Estilo das Imagens de Ícone (Tesoura e Barba) */
+.scissor-icon,
+.beard-icon {
+    width: 40px; /* Tamanho do ícone dentro do círculo */
+    height: 40px;
 }
 
-.servico-preco {
+/* Estilo do Preço */
+.price {
     font-size: 20px;
     font-weight: bold;
     color: black;
     margin: 5px 0 0 0; 
 }
 
-.servico-descricao {
+/* Estilo da Descrição */
+.description,
+.descripition { /* Corrigido o erro de digitação no HTML (.descripition) */
     font-size: 16px;
     color: black;
     margin: 0; 
 }
 
+/* Cor do Ícone de Corte (Laranja Claro) */
 .service-icon.cut {
-
-    background-color: #ffb881; 
+    background-color: #ffb881; /* Cor próxima ao laranja da imagem */
 }
 
-.service-icon.beard {
-
-    background-color: #e0e0e0; 
+/* Cor do Ícone de Barba (Cinza Claro) */
+.services-icons > div:nth-child(2) > div { /* Seleciona o div do ícone de Barba */
+    background-color: #e0e0e0; /* Cor cinza claro */
 }
-
-.scissor-icon {
-    width: 40px;
-}
-
-.beard {
-    width: 50px;
-}  */
