@@ -75,48 +75,37 @@ a {
 }
 
 .services-icons {
-    /* Posicionamento fixo na lateral direita */
     position: absolute;
-    right: 50px; /* Distância da margem direita */
-    top: 50%; /* Ponto de referência vertical no meio */
-    transform: translateY(-50%); /* Ajusta 50% da própria altura para centralizar verticalmente */
-    
-    /* Empilhamento dos itens */
+    right: 50px; 
+    top: 50%; 
+    transform: translateY(-50%);
     display: flex;
-    flex-direction: column; /* Coloca os itens um abaixo do outro */
-    gap: 30px; /* Espaço entre os componentes */
+    flex-direction: column;
+    gap: 30px;
 }
 
-/* Estilo comum para ambos os componentes */
 .services-icons > div {
-    text-align: center; /* Centraliza todo o texto e o círculo no item */
-    width: 150px; /* Define uma largura para o item */
+    text-align: center;
+    width: 150px;
 }
 
-/* Estilo do Círculo do Ícone */
 .service-icon,
-.services-icons > div > div { /* Seleciona os contêineres dos ícones */
+.services-icons > div > div {
     width: 80px;
     height: 80px;
-    border-radius: 50%; /* Transforma o quadrado em círculo */
-    
-    /* Centraliza o círculo no contêiner do item */
+    border-radius: 50%;
     margin: 0 auto 5px auto; 
-    
-    /* Centraliza a imagem/ícone dentro do círculo */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Estilo das Imagens de Ícone (Tesoura e Barba) */
 .scissor-icon,
 .beard-icon {
-    width: 40px; /* Tamanho do ícone dentro do círculo */
+    width: 40px;
     height: 40px;
 }
 
-/* Estilo do Preço */
 .price {
     font-size: 20px;
     font-weight: bold;
@@ -124,20 +113,17 @@ a {
     margin: 5px 0 0 0; 
 }
 
-/* Estilo da Descrição */
 .description,
-.descripition { /* Corrigido o erro de digitação no HTML (.descripition) */
+.descripition {
     font-size: 16px;
     color: black;
     margin: 0; 
 }
 
-/* Cor do Ícone de Corte (Laranja Claro) */
 .service-icon.cut {
-    background-color: #ffb881; /* Cor próxima ao laranja da imagem */
+    background-color: #ffb881;
 }
 
-/* Cor do Ícone de Barba (Cinza Claro) */
-.services-icons > div:nth-child(2) > div { /* Seleciona o div do ícone de Barba */
-    background-color: #e0e0e0; /* Cor cinza claro */
+.services-icons > div:nth-child(2) > div {
+    background-color: #e0e0e0;
 }
