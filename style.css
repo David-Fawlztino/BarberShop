@@ -1,9 +1,19 @@
+body {
+    font-family: 'Montserrat'; 
+    
+    margin: 0;
+
+    width: 100%; 
+
+    overflow-x: hidden; 
+}
 .logo-barbearia {
     width: 95px; 
         
 }
 
 .header {
+
     padding: 10px 0;
 
     display: flex;
@@ -30,8 +40,6 @@ a {
     cursor: pointer;
 
     font-size: 25px;
-
-    font-family: sans-serif;
     
     text-decoration: none;
 
@@ -54,24 +62,53 @@ a {
 }
 
 .text-home {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
     margin-left: 200px;
     margin-top: -550px;
     width: 500px;
 }
 
+.agendamento-grup {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.arrow {
+    width: 50px; 
+    height: 50px; 
+    background-color: #201f1f;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 30px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.arrow img {
+    width: 20px;
+}
+
 .agendar{
+    height: 50px; 
     display: flex;
     margin-left: 200px;
-    margin-top: 20px;
+    margin-top: px;
     padding: 10px 60px;
+    align-items: center;
     font-size: 20px;
     background-color: rgb(173, 106, 4);
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 30px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    gap: 20px;
 }
 
 .services-icons {
@@ -113,8 +150,7 @@ a {
     margin: 5px 0 0 0; 
 }
 
-.description,
-.descripition {
+.description {
     font-size: 16px;
     color: black;
     margin: 0; 
@@ -125,5 +161,99 @@ a {
 }
 
 .services-icons > div:nth-child(2) > div {
-    background-color: #e0e0e0;
+    background-color: #c4c4c4;
+}
+
+.best-prods {
+    background-color: black;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 30px 40px; 
+    width: 100%;
+    margin-top: 179px;
+    box-sizing: border-box;
+}
+
+.best-prods h2 {
+    font-family: 'roboto';
+    color: white;
+    margin-left: 50px;
+    font-size: 45px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.prod-list {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end; 
+    flex-shrink: 0; 
+}
+
+.card-prod{
+    background-color: transparent;
+    position:relative;
+    border: solid #444;
+    border-radius: 8px;
+    width: 250px;
+    height: 150px;
+    overflow: hidden;
+    padding: 25px 80px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.card-prod:hover {
+    transform: translateY(-5px); /* Move o card um pouco para cima */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+}
+
+.card-prod:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
+}
+
+.card-prod img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    margin-bottom: 0;
+    border: none;
+    display:block
+}
+
+.card-prod p {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 2; 
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: transparent; 
+    padding: 0; 
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    font-weight: bold; 
+}
+
+.barbers h2 {
+    text-align: center;
+    font-family: 'roboto';
+    font-size: 36px;
+    margin-bottom: 20px;
 }
