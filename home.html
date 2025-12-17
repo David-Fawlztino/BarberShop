@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="image/Logo.png">
-    <title>BarberShop</title>
+    <title>Barbearia Itaim</title>
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
@@ -17,10 +17,10 @@
             <img class="logo-barbearia" src="image/Logo.png" alt="">
             <nav class="navigating">
                 <a class="home" href="home.html">Home</a>
-                <a class="equipe" href="equipe.html">Equipe</a>
-                <a class="servicos" href="servicos.html">Serviços</a>
+                <a class="equipe" href="#equipe">Equipe</a>
+                <a class="servicos" href="#serviços">Serviços</a>
                 <a class="produtos" href="produtos.html">Produtos</a>
-                <a class="contato" href="contato.html">Contato</a>
+                <a class="contato" href="#contact">Contato</a>
             </nav>
             <div class="space"></div>
             <a href="https://www.instagram.com/barbeariaitaim">
@@ -74,7 +74,7 @@
         </div>
     </section>
     
-    <section class="barbers">
+    <section id="equipe" class="barbers">
         <h2>Conheça nossa equipe</h2>
         <div class="barbers-list">
             <div class="barbers-card-1">
@@ -104,10 +104,10 @@
         </div>
     </section>
 
-    <section class="our-services">
+    <section id="serviços" class="our-services">
         <div class="comments">
             <h2>Comentarios</h2>
-            <p class="comments-text">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tenetur dolore qui. Fugiat consequatur temporibus obcaecati saepe nulla quia maiores dicta quas dolor enim qui reiciendis mollitia nesciunt, aperiam sequi?"</p>
+            <p class="comments-text">"“Atendimento excelente! O barbeiro foi super atencioso e caprichoso no corte. Saí de lá me sentindo outro! Com certeza voltarei.”"</p>
             <div class="info">
                 <p class="comments-name">name</p>
                 <p class="virgula">,</p>
@@ -133,7 +133,7 @@
         <span class="service-name">Corte + Barba</span>
         <span class="service-price">$ 120</span> </div>
     
-    <a href="#" class="view-products-link">Ver produtos</a>
+    <a href="produtos.html" class="view-products-link">Ver produtos</a>
 </div>
     </section>
     <h2 class="prod-title">Produtos</h2>
@@ -175,5 +175,83 @@
         </div>
     </section>
     <a href="" class="prod-button">Ver tudo</a>
+    <section id="contact" class="contact">
+        <div class="contact-content-wrapper">
+        
+            <div class="contact-left">
+                <h2>Entre em contato</h2>
+                <p class="contact-text">Estamos à disposição para esclarecer dúvidas, ouvir sugestões ou receber seu feedback. Fale conosco pelo telefone, redes sociais ou venha nos visitar pessoalmente. Será um prazer ajudar você da melhor forma possível!</p>
+                <div class="contact-buttons-group">
+                    <a href="#" class="contact-button-agendar">Agendar</a>
+                    <a href="#" class="contact-button-whatsapp"> <img class="whats-logo" src="image/whatsapp.png" alt=""> Whatsapp</a>
+                </div>
+            </div>
+        
+            <div class="contact-right">
+                <div class="map-card">
+                    <img src="image/Mapa.png" alt="Mapa de Localização" class="map-image-content">
+                </div>
+
+                <div class="location-details">
+                    <div class="detail-item">
+                        <img src="image/Map pin.png" alt="Localização" class="detail-icon"> <p class="detail-title">Localização</p>
+                    </div>
+                    <p class="detail-text-address">R. Clodomiro Amazonas, 781 - Vila Nova Conceição</p>
+                
+                    <div class="detail-item">
+                        <img src="image/Contact.png" alt="Telefone" class="detail-icon"> <p class="detail-text">(11) 1234-567</p>
+                    </div>
+                
+                    <div class="detail-item">
+                        <img src="image/insta2.png" alt="Instagram" class="detail-icon"> <p class="detail-text">@BarbeariaItaim</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+     
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-column footer-about">
+                <div class="footer-brand-header">
+                    <img class="logo-footer" src="image/Logo.png" alt="Logo Barbearia Itaim">
+                    <h2 class="footer-title">Barbearia Itaim</h2>
+                </div>
+                <p class="footer-description">
+                    A Itaim transforma cuidado e estilo em uma experiência completa, unindo técnica e atenção aos detalhes para que cada cliente saia confiante, renovado e pronto para impressionar.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><img src="https://img.icons8.com/material-outlined/24/000000/instagram-new.png"/></a>
+                    <a href="#" class="social-link"><img src="https://img.icons8.com/material-outlined/24/000000/facebook-new.png"/></a>
+                    <a href="#" class="social-link"><img src="https://img.icons8.com/material-outlined/24/000000/filled-message.png"/></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3 class="footer-column-title">A Barbearia</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Quem somos</a></li>
+                    <li><a href="#">Trabalhe conosco</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3 class="footer-column-title">Ajuda</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Agendamentos</a></li>
+                    <li><a href="#">Cuidados Pós-Corte</a></li>
+                    <li><a href="#">Suporte</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            @2026, Felipe Simão. Todos os direitos reservados.
+        </div>
+    </div>
+</footer>
     </body>
 </html>
