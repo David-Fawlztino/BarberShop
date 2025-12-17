@@ -165,38 +165,44 @@ a {
     display: flex; 
     align-items: center; 
     justify-content: space-between; 
-    padding: 30px 40px; 
+    padding: clamp(20px, 3vw, 40px);
     width: 100%;
-    margin-top: 179px;
+    margin-top: clamp(100px, 10vw, 179px);
     box-sizing: border-box;
+    flex-wrap: wrap;
+    gap: clamp(20px, 4vw, 40px);
 }
 
 .best-prods h2 {
     font-family: 'roboto';
     color: white;
-    margin-left: 50px;
+    margin-left: 0;
     font-size: clamp(24px, 5vw, 45px);
     text-align: left;
     display: flex;
     align-items: center;
+    flex: 1 1 100%;
 }
 
 .prod-list {
     display: flex;
-    gap: 15px;
+    gap: clamp(10px, 2vw, 15px);
     align-items: flex-end; 
-    flex-shrink: 0; 
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    flex: 1 1 100%;
 }
 
 .card-prod{
     background-color: transparent;
-    position:relative;
+    position: relative;
     border: solid #444;
     border-radius: 8px;
-    width: 250px;
-    height: 150px;
+    width: clamp(120px, 25vw, 250px);
+    height: clamp(100px, 20vw, 150px);
     overflow: hidden;
-    padding: 25px 80px;
+    padding: clamp(10px, 2vw, 25px);
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
 }
@@ -255,51 +261,50 @@ a {
 }
 
 .barbers-list {
-    display: flex;
-    gap: 15px;
-    align-items: flex-end; 
-    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: clamp(15px, 3vw, 30px);
+    align-items: end;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 clamp(10px, 2vw, 40px);
+    box-sizing: border-box;
 }
 
 .barbers-card-1 {
     position: relative;
     background-color: black;
-    width: 399px;
-    height: 736px;
+    width: 100%;
+    height: auto;
     overflow: hidden;
     border-radius: 15px;
     transition: transform 0.3s ease-in-out;
-    margin-left: 220px;
-    margin-bottom: 100px;
-    margin-top: 50px;
+    margin: 0;
     box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.5);
 }
 
 .barbers-card-2 {
     position: relative;
     background-color: #F9F3F0;
-    width: 399px;
-    height: 736px;
+    width: 100%;
+    height: auto;
     overflow: hidden;
     border-radius: 15px;
     transition: transform 0.3s ease-in-out;
-    margin-left: 120px;
-    margin-bottom: 100px;
-    margin-top: 50px;
+    margin: 0;
     box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.5);
 }
 
 .barbers-card-3 {
     position: relative;
     background-color: black;
-    width: 399px;
-    height: 736px;
+    width: 100%;
+    height: auto;
     overflow: hidden;
     border-radius: 15px;
     transition: transform 0.3s ease-in-out;
-    margin-left: 120px;
-    margin-bottom: 100px;
-    margin-top: 50px;
+    margin: 0;
     box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.5);
 }
 
@@ -337,17 +342,18 @@ a {
 }
 
 .barber-button {
-    position: absolute;
-    bottom: 30px;  
-    height: 60px;
-    width: 399px;
+    position: static;
+    width: 100%;
+    height: auto;
     border-radius: 10px;
     background-color: #ad6a04; 
     color: white;
     border: none;
     cursor: pointer;
-    font-size: 23px;
+    font-size: clamp(16px, 2vw, 23px);
     text-decoration: bold;
+    padding: clamp(10px, 2vw, 15px);
+    margin-top: clamp(15px, 3vw, 30px);
 }
 
 .barber-button:hover {
@@ -356,23 +362,25 @@ a {
 }
 
 .our-services {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     background-color: #231F20;
     font-family: 'roboto';
-    height: 900px;
-    margin-bottom: 20px;
-    margin-top: 100px;
+    gap: clamp(30px, 5vw, 60px);
+    padding: clamp(30px, 5vw, 100px);
+    margin: clamp(50px, 8vw, 100px) 0;
 }
 
 .comments {
-    display: center;
     background-color: white;
-    height: 500px;
-    width: 600px;
-    margin-top: 145px;
-    margin-left: 200px;
+    width: 100%;
+    max-width: clamp(300px, 90vw, 600px);
+    height: auto;
+    margin: clamp(20px, 4vw, 145px) auto;
     border-radius: 20px;
     box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.5);
+    padding: clamp(20px, 3vw, 30px);
+    box-sizing: border-box;
 }
 
 .comments h2 {
@@ -445,13 +453,14 @@ a {
 
 /* --- Estilos da Coluna de Serviços (.services) --- */
 .services {
-    /* Estilizando o container da lista de serviços */
     display: flex;
     flex-direction: column;
-    margin-top: 145px; 
+    width: 100%;
+    max-width: clamp(300px, 90vw, 600px);
+    margin: clamp(20px, 3vw, 145px) auto;
     color: white;
-    width: 400px;
-    margin-left: 150px; 
+    padding: 0 clamp(15px, 2vw, 30px);
+    box-sizing: border-box;
 }
 
 .services h2 {
@@ -527,11 +536,12 @@ a {
 }
 
 .products-bar {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    gap: 30px;
-    width: 100%; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: clamp(20px, 3vw, 40px);
+    justify-items: center;
+    padding: 0 clamp(10px, 2vw, 30px);
+    box-sizing: border-box;
 }
 
 .prod-items {
@@ -552,92 +562,17 @@ a {
     margin-top: 10px;
 }
 
-.prod-card-1 {
+.prod-card-1, .prod-card-2, .prod-card-3, .prod-card-4, .prod-card-5 {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #D9D9D9;
-    width: 300px;
-    height: 340px;
+    width: clamp(200px, 30vw, 300px);
+    height: clamp(200px, 30vw, 340px);
     overflow: hidden;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     transition: transform 0.3s ease-in-out;
-    margin-left: 120px;
-    margin-bottom: 100px;
-    margin-top: 50px;
-    cursor: pointer;
-    margin: 0 0 0 150px;
-}
-
-.prod-card-2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #D9D9D9;
-    width: 300px;
-    height: 340px;
-    overflow: hidden;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    transition: transform 0.3s ease-in-out;
-    margin-left: 120px;
-    margin-bottom: 100px;
-    margin-top: 50px;
-    cursor: pointer;
-    margin: 0;
-}
-
-.prod-card-3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #D9D9D9;
-    width: 300px;
-    height: 340px;
-    overflow: hidden;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    transition: transform 0.3s ease-in-out;
-    margin-left: 120px;
-    margin-bottom: 100px;
-    margin-top: 50px;
-    cursor: pointer;
-    margin: 0;
-}
-
-.prod-card-4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #D9D9D9;
-    width: 300px;
-    height: 340px;
-    overflow: hidden;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    transition: transform 0.3s ease-in-out;
-    margin-left: 120px;
-    margin-bottom: 100px;
-    margin-top: 50px;
-    cursor: pointer;
-    margin: 0;
-}
-
-.prod-card-5 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #D9D9D9;
-    width: 300px;
-    height: 340px;
-    overflow: hidden;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    transition: transform 0.3s ease-in-out;
-    margin-left: 120px;
-    margin-bottom: 100px;
-    margin-top: 50px;
     cursor: pointer;
     margin: 0;
 }
@@ -688,20 +623,13 @@ a {
 }
 
 .contact-content-wrapper {
-    display: flex; 
-    
-    /* CHAVE 1: Mudar a distribuição do espaço */
-    /* Empurra o conteúdo para as extremidades (esquerda e direita) */
-    justify-content: space-between; 
-    
-    align-items: flex-start; 
-    
-    /* CHAVE 2: Limitar a largura e centralizar na tela */
-    max-width: 1200px; /* Reduzi o max-width de 1400px para 1200px para forçar o conteúdo a se aproximar */
-    margin: 0 100px; /* Mantém o wrapper centralizado */
-    padding: 0 40px; /* Adiciona padding interno para não colar nas bordas da tela */
-    
-    gap: 30px; /* Reduz o gap entre as colunas para 30px */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(15px, 2vw, 40px);
+    gap: clamp(30px, 5vw, 60px);
+    align-items: start;
 }
 
 /* --- COLUNA ESQUERDA: Texto e Botões --- */
@@ -711,7 +639,7 @@ a {
 }
 
 .contact-left h2 {
-    font-size: 50px;
+    font-size: clamp(28px, 5vw, 50px);
     font-weight: bold;
     margin-bottom: 20px;
     line-height: 1.1;
@@ -719,7 +647,7 @@ a {
 }
 
 .contact-text {
-    font-size: 18px;
+    font-size: clamp(14px, 2vw, 18px);
     width: 100%; 
     max-width: 450px; 
     line-height: 1.5;
@@ -765,29 +693,23 @@ a {
 
 /* --- COLUNA DIREITA: Mapa e Detalhes --- */
 .contact-right {
-    display: flex; 
-    flex-direction: row; 
-    gap: 200px; 
-    align-items: flex-start; 
-    width: 45%;
-    max-width: 500px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: clamp(20px, 3vw, 100px);
+    align-items: start;
+    width: 100%;
 }
 
-/* Estilo do Card do Mapa */
 .map-card {
-    /* CHAVE 1: Configura o cartão para ser um contêiner Flexbox */
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente o conteúdo (a imagem) */
-    align-items: center; /* Centraliza verticalmente o conteúdo (a imagem) */
-    
-    /* CHAVE 2: Define o tamanho do cartão do mapa para ser reduzido */
-    width: 400px; /* Largura reduzida, como na imagem de referência */
-    height: 400px; /* Altura reduzida, como na imagem de referência */
-    flex-shrink: 0; /* Impede que o cartão do mapa encolha */
-    
-    /* Estilos de aparência */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: clamp(200px, 60vw, 400px);
+    flex-shrink: 0;
     border-radius: 10px;
-    overflow: hidden; 
+    overflow: hidden;
+    max-width: 500px;
 }
 
 /* Estilo da Imagem do Mapa */
@@ -854,10 +776,10 @@ a {
 }
 
 .footer-grid {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 20px;
-    gap: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: clamp(30px, 4vw, 60px);
+    margin: 0;
 }
 
 /* Alinha Logo e Título horizontalmente */
@@ -869,7 +791,7 @@ a {
 }
 
 .footer-title {
-    font-size: 28px;
+    font-size: clamp(18px, 3vw, 28px);
     font-weight: bold;
     margin: 0;
     color: #000;
@@ -897,7 +819,7 @@ a {
 
 /* Colunas de Links */
 .footer-column-title {
-    font-size: 22px;
+    font-size: clamp(16px, 2.5vw, 22px);
     font-weight: bold;
     color: #000;
     margin-bottom: 20px;
@@ -1044,855 +966,119 @@ a {
     width: 80px;
 }
 
-/* --- RESPONSIVIDADE --- */
+/* --- RESPONSIVIDADE MÍNIMA --- */
+/* A maioria dos estilos já se adapta com clamp() e Grid/Flexbox inteligente */
 
-@media (max-width: 1200px) {
-    .header {
-        padding: 10px 20px;
-    }
-
-    .barber-home {
-        margin-left: 700px;
-        width: 350px;
-    }
-
-    .text-home {
-        margin-left: 100px;
-        width: 400px;
-    }
-
-    .agendar {
-        margin-left: 100px;
-        padding: 10px 40px;
-        font-size: 18px;
-    }
-
-    .services-icons {
-        right: 20px;
-        gap: 20px;
-    }
-
-    .best-prods h2 {
-        margin-left: 30px;
-        font-size: 36px;
-    }
-
-    .prod-list {
-        gap: 10px;
-    }
-
-    .card-prod {
-        width: 200px;
-        height: 120px;
-        padding: 15px 60px;
-    }
-
-    .card-prod p {
-        font-size: 20px;
-    }
-
-    .contact-content-wrapper {
-        max-width: 100%;
-        margin: 0 50px;
-    }
-
-    .contact-right {
-        gap: 100px;
-    }
-
-    .map-card {
-        width: 350px;
-        height: 350px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .barber-home {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        width: 80%;
-        margin-top: 50px;
-    }
-
-    .text-home {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 30px;
-        text-align: center;
-        width: 90%;
-        font-size: 18px;
-    }
-
-    .agendamento-grup {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .agendar {
-        margin-left: 0;
-        padding: 10px 40px;
-    }
-
-    .services-icons {
-        position: static;
-        transform: none;
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 50px;
-        width: 100%;
-        gap: 20px;
-    }
-
-    .services-icons > div {
-        width: 120px;
-    }
-
-    .service-icon,
-    .services-icons > div > div {
-        width: 70px;
-        height: 70px;
-    }
-
-    .price {
-        font-size: 18px;
-    }
-
-    .description {
+@media (max-width: 480px) {
+    html {
         font-size: 14px;
     }
 
-    .best-prods {
-        flex-direction: column;
-        padding: 30px 20px;
-    }
-
-    .best-prods h2 {
-        margin-left: 0;
-        margin-bottom: 30px;
-        font-size: 32px;
-        text-align: center;
-    }
-
-    .prod-list {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-
-    .card-prod {
-        width: 200px;
-        height: 120px;
-    }
-
-    .barbers-card-1, .barbers-card-2, .barbers-card-3 {
-        margin-left: 0;
-        margin-right: 0;
-        width: 90%;
-        max-width: 350px;
-        height: auto;
-    }
-
-    .barber-button {
-        position: static;
-        width: 100%;
-        height: auto;
-        margin-top: 20px;
-    }
-
-    .our-services {
-        flex-direction: column;
-        height: auto;
-        padding: 40px 20px;
-    }
-
-    .comments {
-        width: 100%;
-        height: auto;
-        margin-left: 0;
-        margin-top: 30px;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-
-    .services {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 30px;
-    }
-
-    .navigation-arrows {
-        margin-top: 20px;
-        margin-right: 0;
-        justify-content: center;
-    }
-
-    .right-arrow, .left-arrow {
-        margin-left: 0;
-    }
-
-    .products-bar {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-
-    .prod-card-1, .prod-card-2, .prod-card-3, .prod-card-4, .prod-card-5 {
-        margin: 20px auto;
-        width: 280px;
-        height: 300px;
-    }
-
-    .title-item-gel, .title-item {
-        margin-left: 0;
-        text-align: center;
-    }
-
-    .contact-content-wrapper {
-        flex-direction: column;
-        margin: 0 20px;
-        gap: 40px;
-    }
-
-    .contact-right {
-        flex-direction: column;
-        width: 100%;
-        gap: 30px;
-    }
-
-    .map-card {
-        width: 100%;
-        max-width: 400px;
-        height: 300px;
-    }
-
-    .location-details {
-        width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    /* Header */
-    .logo-barbearia {
-        width: 70px;
-    }
-
     .header {
-        flex-direction: column;
-        padding: 15px;
-        gap: 15px;
+        padding: clamp(8px, 2vw, 15px);
+        gap: clamp(5px, 1vw, 10px);
     }
 
     .navigating {
-        display: flex;
-        flex-wrap: wrap;
+        order: 3;
+        width: 100%;
         justify-content: center;
-        gap: 8px;
+        gap: clamp(5px, 1vw, 8px);
     }
 
     .navigating a {
-        font-size: 16px;
+        font-size: clamp(12px, 1.5vw, 14px);
+        padding: 2px;
+    }
+
+    .space {
+        display: none;
     }
 
     .insta-icon {
-        width: 30px;
-        margin-right: 15px;
+        width: clamp(18px, 4vw, 25px);
+        margin-right: clamp(8px, 1.5vw, 10px);
     }
 
-    .space { display: none; }
-
-    /* Home Section */
-    .barber-home {
-        width: 100%;
-        margin-top: 30px;
-    }
-
-    .text-home {
-        width: 100%;
-        font-size: 16px;
-    }
-
-    .arrow {
-        width: 40px;
-        height: 40px;
-    }
-
-    .arrow img {
-        width: 18px;
-    }
-
-    .agendar {
-        height: 45px;
-        font-size: 16px;
-        padding: 8px 30px;
-    }
-
-    /* Services Icons */
     .services-icons {
-        flex-direction: row;
-        gap: 15px;
-        margin-top: 30px;
+        position: static;
+        flex-wrap: wrap;
+        gap: clamp(12px, 2vw, 20px);
     }
 
     .services-icons > div {
-        width: 100px;
+        width: clamp(70px, 20vw, 100px);
     }
 
     .service-icon,
     .services-icons > div > div {
-        width: 60px;
-        height: 60px;
-    }
-
-    .scissor-icon,
-    .beard-icon {
-        width: 30px;
-        height: 30px;
-    }
-
-    .price {
-        font-size: 16px;
-    }
-
-    .description {
-        font-size: 13px;
-    }
-
-    /* Best Products */
-    .best-prods {
-        margin-top: 80px;
-        padding: 20px;
-    }
-
-    .best-prods h2 {
-        font-size: 28px;
-    }
-
-    .prod-list {
-        gap: 15px;
-    }
-
-    .card-prod {
-        width: 150px;
-        height: 100px;
-        padding: 10px 40px;
-    }
-
-    .card-prod p {
-        font-size: 18px;
-    }
-
-    /* Barbers */
-    .barbers h2 {
-        font-size: 28px;
-    }
-
-    .barbers-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-
-    .barbers-card-1, .barbers-card-2, .barbers-card-3 {
-        width: 100%;
-        height: auto;
-        margin-bottom: 30px;
-        margin-top: 20px;
-        box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
-    }
-
-    .name-bar {
-        width: 90%;
-        height: auto;
-        padding: 10px 15px;
-    }
-
-    .barber-name {
-        font-size: 18px;
-    }
-
-    .barber-type {
-        font-size: 14px;
-    }
-
-    .barber-button {
-        width: 90%;
-        height: auto;
-        font-size: 18px;
-        padding: 12px;
-    }
-
-    /* Services Section */
-    .our-services {
-        height: auto;
-        margin-top: 50px;
-    }
-
-    .comments {
-        width: 90%;
-        height: auto;
-        margin: 20px auto;
-    }
-
-    .comments h2 {
-        font-size: 22px;
-        margin-top: 20px;
-    }
-
-    .comments-text {
-        font-size: 18px;
-        margin: 20px 20px 0 20px;
-    }
-
-    .info {
-        margin-bottom: 20px;
-        margin-right: 15px;
-        flex-wrap: wrap;
-    }
-
-    .comments-name {
-        font-size: 18px;
-    }
-
-    .comments-service {
-        font-size: 14px;
-    }
-
-    .navigation-arrows {
-        margin-top: 20px;
-        margin-right: 0;
-        gap: 10px;
-        justify-content: center;
-    }
-
-    .right-arrow, .left-arrow {
-        margin-left: 0;
-        width: 25px;
-        height: 25px;
-    }
-
-    .services {
-        width: 90%;
-        margin: 20px auto;
-        padding: 0 15px;
-        box-sizing: border-box;
-    }
-
-    .services h2 {
-        font-size: 32px;
-        text-align: left;
-    }
-
-    .service-item {
-        padding: 8px 0;
-    }
-
-    .service-name {
-        font-size: 16px;
-    }
-
-    .service-price {
-        font-size: 18px;
-    }
-
-    .view-products-link {
-        margin-left: 0;
-        font-size: 14px;
-    }
-
-    /* Products */
-    .prod-title {
-        font-size: 32px;
-    }
-
-    .most-selled {
-        margin-left: 0;
-        font-size: 20px;
-        justify-content: center;
-    }
-
-    .products-bar {
-        padding: 0 10px;
-    }
-
-    .prod-card-1, .prod-card-2, .prod-card-3, .prod-card-4, .prod-card-5 {
-        width: 90%;
-        max-width: 250px;
-        height: 250px;
-        margin: 15px auto;
-    }
-
-    .image-prod-1 { height: 180px; }
-    .image-prod-2 { height: 150px; }
-    .image-prod-3 { height: 140px; }
-    .image-prod-4 { height: 140px; }
-    .image-prod-5 { height: 140px; }
-
-    .prod-button {
-        margin-top: 80px;
-        margin-bottom: 100px;
-        padding: 12px 60px;
-        font-size: 0.9em;
-    }
-
-    /* Contact */
-    .contact {
-        padding: 40px 0;
-    }
-
-    .contact-content-wrapper {
-        margin: 0 15px;
-    }
-
-    .contact-left h2 {
-        font-size: 32px;
-    }
-
-    .contact-text {
-        font-size: 16px;
-    }
-
-    .contact-buttons-group {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .contact-button-agendar,
-    .contact-button-whatsapp {
-        width: 100%;
-        padding: 12px 20px;
-        border-radius: 5px;
-    }
-
-    .contact-right {
-        gap: 20px;
-    }
-
-    .map-card {
-        width: 100%;
-        height: 250px;
-    }
-
-    .detail-icon {
-        width: 18px;
-        height: 18px;
-    }
-
-    .detail-title {
-        font-size: 18px;
-    }
-
-    .detail-text-address,
-    .detail-text {
-        font-size: 14px;
-        margin-left: 25px;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Header */
-    .logo-barbearia {
-        width: 50px;
-    }
-
-    .header {
-        padding: 10px;
-        gap: 10px;
-    }
-
-    .navigating a {
-        font-size: 14px;
-        padding: 3px;
-    }
-
-    .insta-icon {
-        width: 25px;
-        margin-right: 10px;
-    }
-
-    a {
-        font-size: 18px;
-    }
-
-    /* Home */
-    .barber-home {
-        margin-top: 20px;
-    }
-
-    .text-home {
-        font-size: 14px;
-        margin: 20px 10px 0 10px;
+        width: clamp(50px, 15vw, 70px);
+        height: clamp(50px, 15vw, 70px);
     }
 
     .arrow {
-        width: 35px;
-        height: 35px;
+        width: clamp(30px, 8vw, 40px);
+        height: clamp(30px, 8vw, 40px);
     }
 
     .arrow img {
-        width: 15px;
+        width: clamp(12px, 3vw, 18px);
     }
 
     .agendar {
-        height: 40px;
-        font-size: 14px;
-        padding: 6px 20px;
-        gap: 10px;
-    }
-
-    /* Services Icons */
-    .services-icons > div {
-        width: 80px;
-    }
-
-    .service-icon,
-    .services-icons > div > div {
-        width: 50px;
-        height: 50px;
-    }
-
-    .scissor-icon,
-    .beard-icon {
-        width: 25px;
-        height: 25px;
-    }
-
-    .price {
-        font-size: 14px;
-    }
-
-    .description {
-        font-size: 12px;
-    }
-
-    /* Best Products */
-    .best-prods {
-        margin-top: 50px;
-        padding: 15px;
-    }
-
-    .best-prods h2 {
-        font-size: 22px;
-    }
-
-    .prod-list {
-        gap: 10px;
-    }
-
-    .card-prod {
-        width: 120px;
-        height: 80px;
-        padding: 8px 30px;
-    }
-
-    .card-prod p {
-        font-size: 14px;
-    }
-
-    /* Barbers */
-    .barbers h2 {
-        font-size: 22px;
-    }
-
-    .name-bar {
-        width: 100%;
         height: auto;
-        padding: 8px 10px;
+        font-size: clamp(12px, 2vw, 16px);
+        padding: clamp(6px, 1vw, 10px) clamp(15px, 3vw, 25px);
+        gap: clamp(8px, 1.5vw, 12px);
     }
 
-    .barber-name {
-        font-size: 16px;
+    .barber-photo {
+        margin-top: 10px;
     }
 
-    .barber-type {
-        font-size: 12px;
-    }
-
-    .barber-button {
-        width: 100%;
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    /* Services */
-    .our-services {
-        padding: 25px 10px;
-    }
-
-    .comments {
-        width: 95%;
-        margin: 15px auto;
-        padding: 15px;
-    }
-
-    .comments h2 {
-        font-size: 18px;
-        margin-top: 15px;
+    .prod-button {
+        margin-top: clamp(40px, 10vw, 80px);
+        margin-bottom: clamp(60px, 15vw, 100px);
+        padding: clamp(8px, 1.5vw, 12px) clamp(30px, 5vw, 50px);
+        font-size: clamp(12px, 1.5vw, 16px);
     }
 
     .comments-text {
-        font-size: 16px;
-        margin: 15px 10px 0 10px;
+        margin: clamp(15px, 3vw, 30px) clamp(10px, 2vw, 20px) 0;
     }
 
     .info {
-        margin-right: 10px;
-        gap: 5px;
+        margin-right: clamp(10px, 2vw, 15px);
+        margin-bottom: clamp(15px, 2vw, 20px);
+        gap: clamp(4px, 1vw, 8px);
     }
 
-    .comments-name {
-        font-size: 16px;
-    }
-
-    .comments-service {
-        font-size: 12px;
-    }
-
-    .navigation-arrows {
-        gap: 8px;
-    }
-
-    .right-arrow, .left-arrow {
-        width: 20px;
-        height: 20px;
-    }
-
-    .services {
-        width: 95%;
-        padding: 0 10px;
-    }
-
-    .services h2 {
-        font-size: 24px;
-    }
-
-    .service-item {
-        padding: 6px 0;
-    }
-
-    .service-name {
-        font-size: 14px;
-    }
-
-    .service-price {
-        font-size: 16px;
-    }
-
-    .view-products-link {
-        font-size: 12px;
-    }
-
-    /* Products */
-    .prod-title {
-        font-size: 24px;
-    }
-
-    .most-selled {
-        font-size: 16px;
-    }
-
-    .prod-card-1, .prod-card-2, .prod-card-3, .prod-card-4, .prod-card-5 {
-        width: 95%;
-        max-width: 200px;
-        height: 200px;
-        margin: 12px auto;
-    }
-
-    .image-prod-1 { height: 140px; }
-    .image-prod-2 { height: 120px; }
-    .image-prod-3 { height: 110px; }
-    .image-prod-4 { height: 110px; }
-    .image-prod-5 { height: 110px; }
-
-    .prod-button {
-        margin-top: 60px;
-        margin-bottom: 80px;
-        padding: 10px 40px;
-        font-size: 0.85em;
-    }
-
-    /* Contact */
-    .contact {
-        padding: 30px 0;
-    }
-
-    .contact-content-wrapper {
-        margin: 0 10px;
-    }
-
-    .contact-left h2 {
-        font-size: 24px;
-    }
-
-    .contact-text {
-        font-size: 14px;
-    }
-
-    .contact-button-agendar,
-    .contact-button-whatsapp {
-        padding: 10px 15px;
-        font-size: 14px;
-    }
-
-    .map-card {
-        width: 100%;
-        height: 200px;
+    .right-arrow,
+    .left-arrow {
+        width: clamp(18px, 5vw, 25px);
+        height: clamp(18px, 5vw, 25px);
     }
 
     .detail-icon {
-        width: 16px;
-        height: 16px;
-        margin-left: 15px;
-    }
-
-    .detail-title {
-        font-size: 16px;
-    }
-
-    .detail-text-address,
-    .detail-text {
-        font-size: 12px;
-        margin-left: 20px;
-    }
-
-    /* Footer */
-    .footer {
-        padding: 30px 0 10px 0;
+        width: clamp(14px, 3vw, 18px);
+        height: clamp(14px, 3vw, 18px);
+        margin-left: clamp(10px, 2vw, 15px);
     }
 
     .footer-container {
-        padding: 0 10px;
-    }
-
-    .logo-footer {
-        width: 45px;
-    }
-
-    .footer-title {
-        font-size: 18px;
+        padding: 0 clamp(10px, 2vw, 15px);
     }
 
     .footer-description {
-        font-size: 12px;
-        margin-bottom: 15px;
-    }
-
-    .footer-column-title {
-        font-size: 14px;
-    }
-
-    .footer-links li {
-        margin-bottom: 8px;
+        font-size: clamp(11px, 1.5vw, 14px);
+        margin-bottom: clamp(12px, 2vw, 20px);
     }
 
     .footer-links a {
-        font-size: 12px;
+        font-size: clamp(11px, 1.5vw, 14px);
     }
 
     .footer-copyright {
-        margin-top: 20px;
-        font-size: 10px;
+        font-size: clamp(9px, 1.2vw, 12px);
     }
 }
