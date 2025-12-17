@@ -847,7 +847,6 @@ a {
     display: flex;
     justify-content: space-between;
     margin-left: 20px;
-    grid-template-columns: 2fr 1fr 1fr; /* Coluna da esquerda é maior */
     gap: 60px;
 }
 
@@ -926,13 +925,964 @@ a {
 }
 
 /* Ajuste para telas menores */
+@media (max-width: 1024px) {
+    .footer-grid {
+        flex-direction: column;
+        gap: 40px;
+        margin-left: 0;
+    }
+    
+    .footer-container {
+        padding: 0 20px;
+    }
+}
+
 @media (max-width: 768px) {
     .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        flex-direction: column;
+        gap: 30px;
+        margin-left: 0;
+    }
+    
+    .footer-title {
+        font-size: 24px;
+    }
+    
+    .footer-description {
+        font-size: 14px;
+        max-width: 100%;
+    }
+    
+    .footer-brand-header {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .footer-social {
+        justify-content: flex-start;
+    }
+    
+    .footer-column-title {
+        font-size: 18px;
+        margin-left: 0;
+        text-align: left;
+    }
+    
+    .footer-links a {
+        font-size: 16px;
+    }
+    
+    .footer-copyright {
+        text-align: left;
+        margin-top: 40px;
+        font-size: 12px;
+    }
+    
+    .logo-footer {
+        width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 40px 0 15px 0;
+    }
+    
+    .footer-container {
+        padding: 0 15px;
+    }
+    
+    .footer-title {
+        font-size: 20px;
+    }
+    
+    .footer-description {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    
+    .footer-column-title {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+        font-size: 14px;
+    }
+    
+    .footer-social img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .footer-copyright {
+        margin-top: 30px;
+        padding-top: 15px;
+    }
+    
+    .logo-footer {
+        width: 50px;
     }
 }
 
 .logo-footer{
     width: 80px;
+}
+
+/* --- RESPONSIVIDADE --- */
+
+@media (max-width: 1200px) {
+    .header {
+        padding: 10px 20px;
+    }
+
+    .barber-home {
+        margin-left: 700px;
+        width: 350px;
+    }
+
+    .text-home {
+        margin-left: 100px;
+        width: 400px;
+    }
+
+    .agendar {
+        margin-left: 100px;
+        padding: 10px 40px;
+        font-size: 18px;
+    }
+
+    .services-icons {
+        right: 20px;
+        gap: 20px;
+    }
+
+    .best-prods h2 {
+        margin-left: 30px;
+        font-size: 36px;
+    }
+
+    .prod-list {
+        gap: 10px;
+    }
+
+    .card-prod {
+        width: 200px;
+        height: 120px;
+        padding: 15px 60px;
+    }
+
+    .card-prod p {
+        font-size: 20px;
+    }
+
+    .contact-content-wrapper {
+        max-width: 100%;
+        margin: 0 50px;
+    }
+
+    .contact-right {
+        gap: 100px;
+    }
+
+    .map-card {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .barber-home {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 80%;
+        margin-top: 50px;
+    }
+
+    .text-home {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        text-align: center;
+        width: 90%;
+        font-size: 18px;
+    }
+
+    .agendamento-grup {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .agendar {
+        margin-left: 0;
+        padding: 10px 40px;
+    }
+
+    .services-icons {
+        position: static;
+        transform: none;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 50px;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .services-icons > div {
+        width: 120px;
+    }
+
+    .service-icon,
+    .services-icons > div > div {
+        width: 70px;
+        height: 70px;
+    }
+
+    .price {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .best-prods {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .best-prods h2 {
+        margin-left: 0;
+        margin-bottom: 30px;
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .prod-list {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .card-prod {
+        width: 200px;
+        height: 120px;
+    }
+
+    .barbers-card-1, .barbers-card-2, .barbers-card-3 {
+        margin-left: 0;
+        margin-right: 0;
+        width: 90%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    .barber-button {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .our-services {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .comments {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-top: 30px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .services {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    .navigation-arrows {
+        margin-top: 20px;
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    .right-arrow, .left-arrow {
+        margin-left: 0;
+    }
+
+    .products-bar {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .prod-card-1, .prod-card-2, .prod-card-3, .prod-card-4, .prod-card-5 {
+        margin: 20px auto;
+        width: 280px;
+        height: 300px;
+    }
+
+    .title-item-gel, .title-item {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .contact-content-wrapper {
+        flex-direction: column;
+        margin: 0 20px;
+        gap: 40px;
+    }
+
+    .contact-right {
+        flex-direction: column;
+        width: 100%;
+        gap: 30px;
+    }
+
+    .map-card {
+        width: 100%;
+        max-width: 400px;
+        height: 300px;
+    }
+
+    .location-details {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header */
+    .logo-barbearia {
+        width: 70px;
+    }
+
+    .header {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .navigating {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .navigating a {
+        font-size: 16px;
+    }
+
+    .insta-icon {
+        width: 30px;
+        margin-right: 15px;
+    }
+
+    .space { display: none; }
+
+    /* Home Section */
+    .barber-home {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .text-home {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .arrow img {
+        width: 18px;
+    }
+
+    .agendar {
+        height: 45px;
+        font-size: 16px;
+        padding: 8px 30px;
+    }
+
+    /* Services Icons */
+    .services-icons {
+        flex-direction: row;
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .services-icons > div {
+        width: 100px;
+    }
+
+    .service-icon,
+    .services-icons > div > div {
+        width: 60px;
+        height: 60px;
+    }
+
+    .scissor-icon,
+    .beard-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    /* Best Products */
+    .best-prods {
+        margin-top: 80px;
+        padding: 20px;
+    }
+
+    .best-prods h2 {
+        font-size: 28px;
+    }
+
+    .prod-list {
+        gap: 15px;
+    }
+
+    .card-prod {
+        width: 150px;
+        height: 100px;
+        padding: 10px 40px;
+    }
+
+    .card-prod p {
+        font-size: 18px;
+    }
+
+    /* Barbers */
+    .barbers h2 {
+        font-size: 28px;
+    }
+
+    .barbers-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .barbers-card-1, .barbers-card-2, .barbers-card-3 {
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .name-bar {
+        width: 90%;
+        height: auto;
+        padding: 10px 15px;
+    }
+
+    .barber-name {
+        font-size: 18px;
+    }
+
+    .barber-type {
+        font-size: 14px;
+    }
+
+    .barber-button {
+        width: 90%;
+        height: auto;
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    /* Services Section */
+    .our-services {
+        height: auto;
+        margin-top: 50px;
+    }
+
+    .comments {
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .comments h2 {
+        font-size: 22px;
+        margin-top: 20px;
+    }
+
+    .comments-text {
+        font-size: 18px;
+        margin: 20px 20px 0 20px;
+    }
+
+    .info {
+        margin-bottom: 20px;
+        margin-right: 15px;
+        flex-wrap: wrap;
+    }
+
+    .comments-name {
+        font-size: 18px;
+    }
+
+    .comments-service {
+        font-size: 14px;
+    }
+
+    .navigation-arrows {
+        margin-top: 20px;
+        margin-right: 0;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .right-arrow, .left-arrow {
+        margin-left: 0;
+        width: 25px;
+        height: 25px;
+    }
+
+    .services {
+        width: 90%;
+        margin: 20px auto;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .services h2 {
+        font-size: 32px;
+        text-align: left;
+    }
+
+    .service-item {
+        padding: 8px 0;
+    }
+
+    .service-name {
+        font-size: 16px;
+    }
+
+    .service-price {
+        font-size: 18px;
+    }
+
+    .view-products-link {
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    /* Products */
+    .prod-title {
+        font-size: 32px;
+    }
+
+    .most-selled {
+        margin-left: 0;
+        font-size: 20px;
+        justify-content: center;
+    }
+
+    .products-bar {
+        padding: 0 10px;
+    }
+
+    .prod-card-1, .prod-card-2, .prod-card-3, .prod-card-4, .prod-card-5 {
+        width: 90%;
+        max-width: 250px;
+        height: 250px;
+        margin: 15px auto;
+    }
+
+    .image-prod-1 { height: 180px; }
+    .image-prod-2 { height: 150px; }
+    .image-prod-3 { height: 140px; }
+    .image-prod-4 { height: 140px; }
+    .image-prod-5 { height: 140px; }
+
+    .prod-button {
+        margin-top: 80px;
+        margin-bottom: 100px;
+        padding: 12px 60px;
+        font-size: 0.9em;
+    }
+
+    /* Contact */
+    .contact {
+        padding: 40px 0;
+    }
+
+    .contact-content-wrapper {
+        margin: 0 15px;
+    }
+
+    .contact-left h2 {
+        font-size: 32px;
+    }
+
+    .contact-text {
+        font-size: 16px;
+    }
+
+    .contact-buttons-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-button-agendar,
+    .contact-button-whatsapp {
+        width: 100%;
+        padding: 12px 20px;
+        border-radius: 5px;
+    }
+
+    .contact-right {
+        gap: 20px;
+    }
+
+    .map-card {
+        width: 100%;
+        height: 250px;
+    }
+
+    .detail-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .detail-title {
+        font-size: 18px;
+    }
+
+    .detail-text-address,
+    .detail-text {
+        font-size: 14px;
+        margin-left: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Header */
+    .logo-barbearia {
+        width: 50px;
+    }
+
+    .header {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .navigating a {
+        font-size: 14px;
+        padding: 3px;
+    }
+
+    .insta-icon {
+        width: 25px;
+        margin-right: 10px;
+    }
+
+    a {
+        font-size: 18px;
+    }
+
+    /* Home */
+    .barber-home {
+        margin-top: 20px;
+    }
+
+    .text-home {
+        font-size: 14px;
+        margin: 20px 10px 0 10px;
+    }
+
+    .arrow {
+        width: 35px;
+        height: 35px;
+    }
+
+    .arrow img {
+        width: 15px;
+    }
+
+    .agendar {
+        height: 40px;
+        font-size: 14px;
+        padding: 6px 20px;
+        gap: 10px;
+    }
+
+    /* Services Icons */
+    .services-icons > div {
+        width: 80px;
+    }
+
+    .service-icon,
+    .services-icons > div > div {
+        width: 50px;
+        height: 50px;
+    }
+
+    .scissor-icon,
+    .beard-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+
+    /* Best Products */
+    .best-prods {
+        margin-top: 50px;
+        padding: 15px;
+    }
+
+    .best-prods h2 {
+        font-size: 22px;
+    }
+
+    .prod-list {
+        gap: 10px;
+    }
+
+    .card-prod {
+        width: 120px;
+        height: 80px;
+        padding: 8px 30px;
+    }
+
+    .card-prod p {
+        font-size: 14px;
+    }
+
+    /* Barbers */
+    .barbers h2 {
+        font-size: 22px;
+    }
+
+    .name-bar {
+        width: 100%;
+        height: auto;
+        padding: 8px 10px;
+    }
+
+    .barber-name {
+        font-size: 16px;
+    }
+
+    .barber-type {
+        font-size: 12px;
+    }
+
+    .barber-button {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    /* Services */
+    .our-services {
+        padding: 25px 10px;
+    }
+
+    .comments {
+        width: 95%;
+        margin: 15px auto;
+        padding: 15px;
+    }
+
+    .comments h2 {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+    .comments-text {
+        font-size: 16px;
+        margin: 15px 10px 0 10px;
+    }
+
+    .info {
+        margin-right: 10px;
+        gap: 5px;
+    }
+
+    .comments-name {
+        font-size: 16px;
+    }
+
+    .comments-service {
+        font-size: 12px;
+    }
+
+    .navigation-arrows {
+        gap: 8px;
+    }
+
+    .right-arrow, .left-arrow {
+        width: 20px;
+        height: 20px;
+    }
+
+    .services {
+        width: 95%;
+        padding: 0 10px;
+    }
+
+    .services h2 {
+        font-size: 24px;
+    }
+
+    .service-item {
+        padding: 6px 0;
+    }
+
+    .service-name {
+        font-size: 14px;
+    }
+
+    .service-price {
+        font-size: 16px;
+    }
+
+    .view-products-link {
+        font-size: 12px;
+    }
+
+    /* Products */
+    .prod-title {
+        font-size: 24px;
+    }
+
+    .most-selled {
+        font-size: 16px;
+    }
+
+    .prod-card-1, .prod-card-2, .prod-card-3, .prod-card-4, .prod-card-5 {
+        width: 95%;
+        max-width: 200px;
+        height: 200px;
+        margin: 12px auto;
+    }
+
+    .image-prod-1 { height: 140px; }
+    .image-prod-2 { height: 120px; }
+    .image-prod-3 { height: 110px; }
+    .image-prod-4 { height: 110px; }
+    .image-prod-5 { height: 110px; }
+
+    .prod-button {
+        margin-top: 60px;
+        margin-bottom: 80px;
+        padding: 10px 40px;
+        font-size: 0.85em;
+    }
+
+    /* Contact */
+    .contact {
+        padding: 30px 0;
+    }
+
+    .contact-content-wrapper {
+        margin: 0 10px;
+    }
+
+    .contact-left h2 {
+        font-size: 24px;
+    }
+
+    .contact-text {
+        font-size: 14px;
+    }
+
+    .contact-button-agendar,
+    .contact-button-whatsapp {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .map-card {
+        width: 100%;
+        height: 200px;
+    }
+
+    .detail-icon {
+        width: 16px;
+        height: 16px;
+        margin-left: 15px;
+    }
+
+    .detail-title {
+        font-size: 16px;
+    }
+
+    .detail-text-address,
+    .detail-text {
+        font-size: 12px;
+        margin-left: 20px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 30px 0 10px 0;
+    }
+
+    .footer-container {
+        padding: 0 10px;
+    }
+
+    .logo-footer {
+        width: 45px;
+    }
+
+    .footer-title {
+        font-size: 18px;
+    }
+
+    .footer-description {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+    .footer-column-title {
+        font-size: 14px;
+    }
+
+    .footer-links li {
+        margin-bottom: 8px;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+    }
+
+    .footer-copyright {
+        margin-top: 20px;
+        font-size: 10px;
+    }
 }
